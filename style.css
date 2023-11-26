@@ -289,16 +289,66 @@ body {
 
         }
         <!----------css for small screen---->
-        @media only screen and (max-with: 600px){
-            #header{
-                background-image:url(formal_phone_image.png) ;
-            }
+       @media only screen and (max-width: 600px) {
             .header-text {
-            margin-top: 100%;
-            font-size: 16px;
-        }
-        .header-text h1{
-            font-size: 30px;
-        }
+                margin-top: 100%;
+                font-size: 16px;
+            }
+
+            .header-text h1 {
+                font-size: 30px;
+            }
+
+            .about-col-1 img {
+                width: 100%;
+                border-radius: 15px;
+                margin-top: 20px;
+            }
+
+            .about-col-1,
+            .about-col-2 {
+                flex-basis: 100%; /* Full width on small screens */
+                text-align: center;
+            }
+
+            .tab-titles {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .tab-links {
+                margin: 10px 0;
+            }
+
+            .tab-contents ul li span {
+                font-size: 12px;
+            }
+
+            .services-list div,
+            .work-list div {
+                margin: 0 auto 30px;
+                text-align: center;
+            }
+
+            .work img {
+                width: 100%;
+            }
+
+            .layer {
+                padding: 0 20px;
+            }
+
+            .social-icons,
+            .btn {
+                margin: 20px auto;
+            }
+
+            .contact-left {
+                flex-basis: 100%;
+            }
+
+            .contact-right form {
+                width: 100%;
+            }
         }
 
