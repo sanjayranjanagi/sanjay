@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Personal Portfolio Website</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="your-logo-url.png" alt="Logo" class="logo">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Portfolio</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-text">
+                <p>Problem Solver</p>
+                <h1>Hi, I'm <span>Sanjay</span> Ranjanagi From India</h1>
+            </div>
+        </div>
+    </div>
+
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="casual-image1.jpg" alt="Sanjay's Image">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>My name is Sanjay Ranjanagi, and I am a passionate computer science student at KLE TECHNOLOGICAL UNIVERSITY.</p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>Problem solver</span><br>Coding, DSA</li>
+                            <li><span>Web Development</span><br>Web app development</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>Problem solver</span><br>Coding, DSA</li>
+                            <li><span>Web Development</span><br>Web app development</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>Problem solver</span><br>Coding, DSA, OOPS</li>
+                            <li><span>Web Development</span><br>Web app development</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="services">
+        <div class="container">
+            <h1 class="sub-title">My Services</h1>
+            <div class="services-list">
+                <div>
+                    <h2>Problem Solver</h2>
+                    <p>Solving problems using C, C++, OOPS, and DSA.</p>
+                    <a href="#">Learn more</a>
+                </div>
+                <div>
+                    <h2>Web Development</h2>
+                    <p>Developing websites for beginners.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="portfolio">
+        <div class="container">
+            <h1 class="sub-title">My Work</h1>
+            <div class="work-list">
+                <div class="work">
+                    <img src="web_develp.jpg" alt="Web Project">
+                    <div class="layer">
+                    	<h3>Web Development</h3>
+                    	<p>The app connects with different real world website like any bank website and college website.</p>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="dsa_image.jpg" alt="DSA Project">
+                     <div class="layer">
+                    	<h3>DS Algorithems</h3>
+                    	<p>Solving Peoblems using Data Structers and Algorithems.</p>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="coding_image.jpg" alt="Coding Project">
+                     <div class="layer">
+                    	<h3>DS Algorithems</h3>
+                    	<p>Solving Peoblems using Data Structers and Algorithems.</p>
+                    	<a href="#"><i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+            </div>
+            <a href="#" class="btn">See more</a>
+        </div>
+    </div>
+<!-----------------contact--------->
+<div id=contact>
+	<div class="container">
+		<div class="row">
+			<div class="contact-left">
+				<h1 class="sub-title">Contact Me</h1>
+				<p><i class="fas fa-paper-plane"></i>contact@gmail.com</p>
+				<p><i class="fas fa-phone-square-alt"</i>0123456789</p>
+				<div class="social-icons">
+					<a href=""><i class="fab fa-facebook"></i></a>
+					<a href=""><i class="fab fa-instagram"></i></a>
+					<a href=""><i class="fab fa-linkedin"></i></a>
+				</div>
+				<a href="resume_sanjay.pdf" download class="btn btn2">Dowload Cv</a>
+			</div>
+			<div class="contact-right">
+				<form>
+					<input type="text" name="Name" placeholder="Your name" required>
+					<input type="email" placeholder="Your email" required>
+					<textarea name="message" rows="6" placeholder="Your message"></textarea>
+					<button type="submit" class="btn btn2">Submit</button>
+				</form>
+			</div>
+		</div>
+		
+	</div>
+</div>
+
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+
+        function opentab(tabname) {
+            for (tablink of tablinks) {
+                tablink.classList.remove("active-link");
+            }
+            for (tabcontent of tabcontents) {
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
+</body>
+</html>
