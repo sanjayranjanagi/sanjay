@@ -1,4 +1,4 @@
-body {
+        body{
 			font-family: 'Poppins', sans-serif;
 			background-color: #2c3e50;
 			color: #ecf0f1;
@@ -10,6 +10,13 @@ body {
 			width: 80%;
 			margin: 0 auto;
 		}
+        #sidemenu{
+            margin-left: 350px;
+            margin-top: 10px;
+        }
+        #role{
+            margin-left: 350px;
+        }
 		#header {
 			height: 100vh;
 			background-image: url('formal1bg.png');
@@ -64,7 +71,8 @@ body {
 		}
 		.header-text h1 {
 			font-size: 48px;
-			margin: 20px 0;
+			margin: 30px 0;
+            margin-left:500px;
 		}
 		.header-text h1 span {
 			color: #ff004f;
@@ -98,7 +106,7 @@ body {
 			margin: 20px 0 40px;
 
 		}
-		.tab-titles {
+        .tab-titles {
         display: flex;
         justify-content: space-around;
         width: 100%;
@@ -111,18 +119,18 @@ body {
 			position: relative;
 		}
 		.tab-links::after{
-			content: '';
-			width: 0;
-			height: 3px;
-			background: #ff004f;
-			position: absolute;
-			left: 0;
-			bottom: -8px;
-			transition: 0.5s;
-		}
-		.tab-links.active-link::after{
-			width: 100%;
-		}
+            content: '';
+            width: 0;
+            height: 3px;
+            background: #ff004f;
+            position: absolute;
+            left: 0;
+            bottom: -8px;
+            transition: 0.5s;
+        }
+        .tab-links.active-link::after{
+            width: 100%;
+        }
 		.tab-contents ul li{
 			list-style: none;
 			margin: 10px 0;
@@ -245,7 +253,6 @@ body {
         }
         .btn:hover{
             background: #ff004f;
-
         }
         <!-----contact------>
         .contact-left{
@@ -294,66 +301,58 @@ body {
 
         }
         <!----------css for small screen---->
-       @media only screen and (max-width: 600px) {
+        @media only screen and (max-with: 600px){
+            #header{
+                background-image:url(formal_phone_image.png) ;
+            }
             .header-text {
-                margin-top: 100%;
-                font-size: 16px;
-            }
+            margin-top: 100%;
+            font-size: 16px;
+        }
+        .header-text h1{
+            font-size: 30px;
+        }
+        nav .fas{
+            display: block;
+            font-size: 25px;
+        }
+        nav ul{
+            background: #ff004f;
+            position: fixed;
+            top: 0;
+            right: -200px;
+            width: 200px;
+            height: 100vh;
+            padding-top: 50px;
+            z-index: 2;
+            transition: right 0.5s;
+        }
+        nav ul li{
+            display: block;
+            margin: 25px;
 
-            .header-text h1 {
-                font-size: 30px;
-            }
-
-            .about-col-1 img {
-                width: 100%;
-                border-radius: 15px;
-                margin-top: 20px;
-            }
-
-            .about-col-1,
-            .about-col-2 {
-                flex-basis: 100%; /* Full width on small screens */
-                text-align: center;
-            }
-
-            .tab-titles {
-                flex-direction: column;
-                align-items: center;
-            }
-
-            .tab-links {
-                margin: 10px 0;
-            }
-
-            .tab-contents ul li span {
-                font-size: 12px;
-            }
-
-            .services-list div,
-            .work-list div {
-                margin: 0 auto 30px;
-                text-align: center;
-            }
-
-            .work img {
-                width: 100%;
-            }
-
-            .layer {
-                padding: 0 20px;
-            }
-
-            .social-icons,
-            .btn {
-                margin: 20px auto;
-            }
-
-            .contact-left {
-                flex-basis: 100%;
-            }
-
-            .contact-right form {
-                width: 100%;
-            }
+        }
+        nav ul .fas{
+            position: absolute;
+            top: 25px;
+            left: 25px;
+            cursor: pointer;
+        }
+        .about-col-1,
+        .about-col-2{
+            flex-basis: 100%;
+            text-align: center;
+        }
+        .tab-titles{
+            flex-direction: column;
+            align-items: center;
+        }
+        .tab-links{
+            margin: 10px 0;
+        }
+        .tab-contents ul li span{
+            font-size: 12px;
+        }
+        .service-list div 
         }
 
