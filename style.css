@@ -98,6 +98,11 @@ body {
 			margin: 20px 0 40px;
 
 		}
+		.tab-titles {
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+    }
 		.tab-links{
 			margin-right: 50px;
 			font-size: 18px;
@@ -116,7 +121,7 @@ body {
 			transition: 0.5s;
 		}
 		.tab-links.active-link::after{
-			width: 50%;
+			width: 100%;
 		}
 		.tab-contents ul li{
 			list-style: none;
