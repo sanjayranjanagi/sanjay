@@ -11,16 +11,19 @@
         <div class="container">
             <nav>
                 <img src="your-logo-url.png" alt="Logo" class="logo">
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Services</a></li>
-                    <li><a href="#">Portfolio</a></li>
-                    <li><a href="#">Contact</a></li>
+                <ul id="sidemenu">
+                    <li><a href="#Home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <i class="fas fa-times" onclick="closemenu()"></i>
                 </ul>
+                <i class="fas fa-bars" onclick="openmenu()"></i>
             </nav>
             <div class="header-text">
-                <p>Problem Solver</p>
+                <p id="role">Problem Solver</p>
                 <h1>Hi, I'm <span>Sanjay</span> Ranjanagi From India</h1>
             </div>
         </div>
@@ -35,15 +38,17 @@
                 <div class="about-col-2">
                     <h1 class="sub-title">About Me</h1>
                     <p>My name is Sanjay Ranjanagi, and I am a passionate computer science student at KLE TECHNOLOGICAL UNIVERSITY.</p>
-                    <div class="tab-titles">
-                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
-                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
-                        <p class="tab-links" onclick="opentab('education')">Education</p>
-                    </div>
+                    <div class="horizontal-sections">
+                        <div class="tab-titles">
+                            <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                            <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                            <p class="tab-links" onclick="opentab('education')">Education</p>
+                        </div>
                     <div class="tab-contents active-tab" id="skills">
                         <ul>
                             <li><span>Problem solver</span><br>Coding, DSA</li>
                             <li><span>Web Development</span><br>Web app development</li>
+                            <li><span>Mathematics</span><br>Solving Aptitude questions.</li>
                         </ul>
                     </div>
                     <div class="tab-contents" id="experience">
@@ -54,8 +59,9 @@
                     </div>
                     <div class="tab-contents" id="education">
                         <ul>
-                            <li><span>Problem solver</span><br>Coding, DSA, OOPS</li>
-                            <li><span>Web Development</span><br>Web app development</li>
+                            <li><span>BE in CS</span><br>Currently persuing my BE in CSE,KLE Technological University<br>CGPA:8.67</li>
+                            <li><span>12th PUC</span><br>Vagdevi PU science college,Bagalkot<br>2019-2021<br>Percentage:90%</li>
+                            <li><span>10th grade</span><br>Venkateshwar Kannada Medium High School,Guledgudd<br>Percentage:81%</li>
                         </ul>
                     </div>
                 </div>
@@ -80,6 +86,31 @@
         </div>
     </div>
 
+   <div id="projects">
+    <div class="container">
+        <h1>My Projects are</h1>
+        <table border="2px">
+            <thead>
+                <tr>
+                    <th>Project name</th>
+                    <th>Time</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Mechanical Clock using Aurdino Bord</td>
+                    <td>3 months</td>
+                </tr>
+                <tr>
+                    <td>Book price prediction using Exploratory Data Analysis</td>
+                    <td>3 months</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+
     <div id="portfolio">
         <div class="container">
             <h1 class="sub-title">My Work</h1>
@@ -88,13 +119,13 @@
                     <img src="web_develp.jpg" alt="Web Project">
                     <div class="layer">
                     	<h3>Web Development</h3>
-                    	<p>The app connects with different real world website like any bank website and college website.</p>
+                    	<p>The app connects with different real world website.<span> like any bank website and college website.</span></p>
                     </div>
                 </div>
                 <div class="work">
                     <img src="dsa_image.jpg" alt="DSA Project">
                      <div class="layer">
-                    	<h3>DS Algorithems</h3>
+                    	<h3 text-ali="center">DS Algorithems</h3>
                     	<p>Solving Peoblems using Data Structers and Algorithems.</p>
                     </div>
                 </div>
@@ -116,8 +147,8 @@
 		<div class="row">
 			<div class="contact-left">
 				<h1 class="sub-title">Contact Me</h1>
-				<p><i class="fas fa-paper-plane"></i>contact@gmail.com</p>
-				<p><i class="fas fa-phone-square-alt"</i>0123456789</p>
+				<p><i class="fas fa-paper-plane"></i>ssranjanagi2003@gmail.com</p>
+				<p><i class="fas fa-phone-square-alt"</i>8277362743</p>
 				<div class="social-icons">
 					<a href=""><i class="fab fa-facebook"></i></a>
 					<a href=""><i class="fab fa-instagram"></i></a>
@@ -152,6 +183,19 @@
             event.currentTarget.classList.add("active-link");
             document.getElementById(tabname).classList.add("active-tab");
         }
+    </script>
+    <script type="text/javascript">
+    	var sidemenu = document.getElementById("sidemenu");
+
+    	function openmenu()
+    	{
+    		sidemenu.style.right = "0";
+    	}
+
+    	function closemenu()
+    	{
+    		sidemenu.style.right = "-200px";
+    	}
     </script>
 </body>
 </html>
